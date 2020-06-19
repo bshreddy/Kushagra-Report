@@ -1,0 +1,59 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
+\usepackage{fontspec, titlesec}
+
+\newcommand \frontmatter { %
+    \cleardoublepage
+    %\@mainmatterfalse
+    \pagenumbering{roman}}
+\newcommand \mainmatter { %
+    \cleardoublepage
+    %\@mainmattertrue
+    \pagenumbering{arabic}}
+\newcommand \backmatter { %
+    \if@openright
+    \cleardoublepage
+    \else
+    \clearpage
+    \fi
+    %\@mainmatterfalse
+}
+
+\setmainfont{Times New Roman}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{12pt}
+\linespread{1.25}
+
+\titleformat{\chapter}
+    {\normalfont\fontsize{15pt}{15pt}\bfseries}{\Roman{chapter}}{1em}{\MakeUppercase}
+\titleformat{\section}
+    {\normalfont\fontsize{12pt}{12pt}\bfseries}{\thesection}{1em}{\MakeUppercase}
+\titleformat{\subsection}
+    {\normalfont\fontsize{12pt}{12pt}\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\frontmatter
+
+Some text...
+% frontmatter is upto Abbreviations
+
+\mainmatter
+
+\chapter{Introduction}
+\section{Section}
+\subsection{Subsection}
+
+First document. This is a simple example, with no extra parameters or packages included.
+
+First document. This is a simple example, with no extra parameters or packages included.
+
+\begin{equation}
+    a = b
+\end{equation}
+
+This is a footnote example \footnote{This is the foot note}
+
+\footnotetext{This is a foot note but not linked}
+
+\end{document}

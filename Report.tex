@@ -1,0 +1,72 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
+\usepackage{fontspec, titlesec}
+
+\newcommand \frontmatter { %
+    \cleardoublepage
+    %\@mainmatterfalse
+    \pagenumbering{roman}}
+\newcommand \mainmatter { %
+    \cleardoublepage
+    %\@mainmattertrue
+    \pagenumbering{arabic}}
+\newcommand \backmatter { %
+    \if@openright
+        \cleardoublepage
+    \else
+        \clearpage
+    \fi
+    %\@mainmatterfalse
+}
+
+\setmainfont{Times New Roman}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{12pt}
+\linespread{1.25}
+
+\titleformat{\chapter}
+    {\normalfont\fontsize{15pt}{15pt}\bfseries}{\Roman{chapter}}{1em}{\MakeUppercase}
+\titleformat{\section}
+    {\normalfont\fontsize{12pt}{12pt}\bfseries}{\thesection}{1em}{\MakeUppercase}
+\titleformat{\subsection}
+    {\normalfont\fontsize{12pt}{12pt}\bfseries}{\thesubsection}{1em}{}
+
+\usepackage{subfiles}
+
+\begin{document}
+
+\frontmatter
+
+\subfile{frontmatter/cover_page}
+\subfile{frontmatter/inner_cover_page}
+\subfile{frontmatter/external_cert}
+\subfile{frontmatter/guide_cert}
+\subfile{frontmatter/acknowledgements}
+\subfile{frontmatter/abstract}
+\subfile{frontmatter/table_of_contents}
+\subfile{frontmatter/list_of_tables}
+\subfile{frontmatter/list_of_figures}
+\subfile{frontmatter/symbols}
+\subfile{frontmatter/abbreviations}
+
+% frontmatter is upto Abbreviations
+
+\mainmatter
+
+\subfile{chapters/introduction}
+
+\subfile{chapters/proposed_method}
+
+\subfile{chapters/requirements_and_specifications}
+
+\subfile{chapters/analysis_and_design}
+
+\subfile{chapters/implementation_and_testing}
+
+\subfile{chapters/conclusion}
+
+\backmatter
+
+% Add References and Appendices
+
+\end{document}
