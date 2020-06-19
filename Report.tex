@@ -1,6 +1,6 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
-\usepackage{fontspec, titlesec}
+\usepackage{fontspec, titlesec, setspace}
 
 \newcommand \frontmatter { %
     \cleardoublepage
@@ -37,33 +37,47 @@
 
 \frontmatter
 
-\subfile{frontmatter/cover_page}
-\subfile{frontmatter/inner_cover_page}
-\subfile{frontmatter/external_cert}
-\subfile{frontmatter/guide_cert}
-\subfile{frontmatter/acknowledgements}
-\subfile{frontmatter/abstract}
-\subfile{frontmatter/table_of_contents}
-\subfile{frontmatter/list_of_tables}
-\subfile{frontmatter/list_of_figures}
-\subfile{frontmatter/symbols}
-\subfile{frontmatter/abbreviations}
+\newgeometry{margin=1in, lmargin=1in}
+\subfile{frontmatter/01_cover_page}
+\restoregeometry 
+
+\subfile{frontmatter/02_inner_cover_page}
+
+\subfile{frontmatter/03_external_cert}
+
+\subfile{frontmatter/04_guide_cert}
+
+\subfile{frontmatter/05_acknowledgements}
+
+\subfile{frontmatter/06_abstract}
+
+\subfile{frontmatter/07_table_of_contents}
+
+\subfile{frontmatter/08_list_of_tables}
+
+\subfile{frontmatter/09_list_of_figures}
+
+\subfile{frontmatter/10_symbols}
+
+\subfile{frontmatter/11_abbreviations}
+
 
 % frontmatter is upto Abbreviations
 
 \mainmatter
 
-\subfile{chapters/introduction}
+\subfile{chapters/01_introduction}
 
-\subfile{chapters/proposed_method}
+\subfile{chapters/02_proposed_method}
 
-\subfile{chapters/requirements_and_specifications}
+\subfile{chapters/03_requirements_and_specifications}
 
-\subfile{chapters/analysis_and_design}
+\subfile{chapters/04_analysis_and_design}
 
-\subfile{chapters/implementation_and_testing}
+\subfile{chapters/05_implementation_and_testing}
 
-\subfile{chapters/conclusion}
+\subfile{chapters/06_conclusion}
+
 
 \backmatter
 
