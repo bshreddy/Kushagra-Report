@@ -1,6 +1,6 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
-\usepackage{fontspec, titlesec, setspace, lipsum}
+\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx}
 
 \newcommand \frontmatter { %
     \cleardoublepage
@@ -32,6 +32,19 @@
     {\normalfont\fontsize{12pt}{12pt}\bfseries}{\thesubsection}{1em}{}
 
 \renewcommand{\contentsname}{Table Of Contents}
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
+\renewcommand{\cftlottitlefont}{\hspace*{\fill}\bfseries\MakeUppercase}
+\renewcommand{\cftafterlottitle}{\hspace*{\fill}}
+\renewcommand{\cftloftitlefont}{\hspace*{\fill}\bfseries\MakeUppercase}
+\renewcommand{\cftafterloftitle}{\hspace*{\fill}}
+
+\newcommand\projectTitle{AI Based Crop Identification Mobile App}
+\newcommand\studentName{B. Sai Hemanth Reddy}
+\newcommand\rollNo{17B81A05H5}
+\newcommand\guideName{M. Sathya Devi}
+\newcommand\guideDesignation{Assistant Professor}
+\newcommand\hodName{Dr. K. Venkateswara Rao}
 
 \usepackage{subfiles}
 
