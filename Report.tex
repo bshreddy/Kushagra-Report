@@ -31,6 +31,8 @@
 \titleformat{\subsection}
     {\normalfont\fontsize{12pt}{12pt}\bfseries}{\thesubsection}{1em}{}
 
+\renewcommand{\contentsname}{Table Of Contents}
+
 \usepackage{subfiles}
 
 \begin{document}
@@ -39,13 +41,14 @@
 
 \newgeometry{margin=1in, lmargin=1in}
 \subfile{frontmatter/01_cover_page}
+\subfile{frontmatter/02_inner_cover_page}
 \restoregeometry 
 
-\subfile{frontmatter/02_inner_cover_page}
-
+\begin{spacing}{1.67}
 \subfile{frontmatter/03_external_cert}
 
 \subfile{frontmatter/04_guide_cert}
+\end{spacing}
 
 \subfile{frontmatter/05_acknowledgements}
 
