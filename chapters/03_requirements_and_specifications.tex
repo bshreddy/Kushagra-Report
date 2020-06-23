@@ -9,79 +9,80 @@
 \subsection{Functional Requirements}
 
 \subsection{Non-Functional Requirements}
-\textbf{Performance}:
-With the help of optimization techniques used in the app, accurate results are provided to users while performing
-tasks\par
+\begin{description}
+  \item[Performance: ] With the help of optimization techniques used in the app, accurate results are provided to users while performing tasks
+  
+  \item[Scalabilty: ] This application maintains a positive user experience for over thousands of users, and since the data is processed
+at the server, Traffic surge can be handled in a simple manner
 
-\textbf{Scalabilty}:
-This application maintains a positive user experience for over thousands of users, and since the data is processed
-at the server, Traffic surge can be handled in a simple manner\par
+  \item[Usability: ] With the help of localization support in the application, users can perform necessary actions in their preferred local language
 
-\textbf{Usability}:
-With the help of localization support in the application, users can perform necessary actions in their preferred
-local language\par
+  \item[Availability: ] Since Android Platform has a Lion's share in mobile market we can easily reach and serve large number of users
 
-\textbf{Availability}:
-Since Android Platform has a Lion's share in mobile market we can easily reach and serve large number of users\par 
+  \item[Security: ] //TODO
 
-\textbf{Security}
-  //TODO
-
-\textbf{Cost and Maintainability}
- //TODO
-
- 
+  \item[Cost and Maintainability: ] //TODO
+\end{description} 
 
 \section{System Specifications}
 
-\subsection{Software Specs}
+\subsection{Software Specifications}
 
-\textbf{1. Android Studio}
+\begin{description}
+  \item[Pytorch: ] Pytorch is an open-source machine learning library based on Torch library. Pytorch is a Tensor computing library and also 
+  a deep learning library with automatic differentiation system. In can be used to build state-of-the-art Neural Networks which are used in
+  self-driving cars.\par
+  The crop detection and crop disease detection is done using a Convolutional Neural Network(CNN) built using ResNet50 as a feature extractor.
+  The current models have an accuracy of 92\% and 90\%.
 
-Android Studio is Android's official IDE. 
-It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.\par
+  \item[NumPy: ] NumPy is a numerical library that is used for accelerated tensor operations. This help is speeding up the computation by 
+  taking advantage of SIMD instructions on modern CPUs and GPUs. This library is useful for preprocessing data before classification.
 
-Android Studio provides a unified environment where you can build apps for 
-Android phones, tablets, Android Wear, Android TV, and Android Auto.
-Structured code modules allow you to divide your project into units of functionality 
-that you can independently build, test, and debug.\par
+  \item[Matplotlib: ] Matplotlib is a plotting library for python. This is useful for EDA and performing error analysis while training 
+  and testing the AI models.
 
-\textbf{2. Google Colab}
+  \item[PIL: ] Python Image Library is an free and open-source that supports opening, modifying, saving images. This is used to convert data
+  sent over internet as bytes to images that can then be used in the AI models for inference. PIL is also used to load images from disk for
+  training the models.
 
-Google Colab is a free cloud service which helps in developing deep learning applications 
-using popular libraries such as Keras, TensorFlow, PyTorch, and OpenCV.\par
+  \item[Colab: ] Google Colab is a free cloud service which helps in developing deep learning applications using popular libraries such 
+  as Keras, TensorFlow, PyTorch. In runs on Google servers with GPU or TPU acceleration which helps in reducing the training period for 
+  the AI model. Giving team, the ability to iterate and improve quickly/
 
+  \item[Flask and Docker: ] Flask is a light-weight web framework for python. This can be used to run the inference server. Flask is ran
+  inside a docker container. Docker is a set of platform as a service products that uses OS-level virtualization to deliver software in 
+  packages called containers. These container can easily be scaled up or down to automatically adjust for usage and network traffic.
 
-Google Colab comes with collaboration backed in the product. 
-In fact, it is a Jupyter notebook that leverages Google Docs collaboration features. 
-It also runs on Google servers and you don’t need to install anything. 
-Moreover, the notebooks are saved to your Google Drive account.\par
+  \item[Android Studio: ] Android Studio is the official IDE for developing native Android Apps. Android Studio provides a unified  
+  environment where you can build apps for Android phones, tablets, Android Wear, Android TV, and Android Auto. Structured code modules 
+  allow you to  divide your project into units of functionality that you can independently build, test, and debug.\par
+  Android's Location library can be used to obtain user's location. Google Maps can we used to display user's location and provide 
+  additional information.
 
+  \item[Xcode: ] Xcode is the official IDE for developing native iOS apps. Xcode provides a unified environment for developing native apps 
+  for all apple devices and services. Swift programming language is used to write apps in Xcode. CoreLocation framework can be used to 
+  obtain user's location. MapKit (Apple Maps) can be used to display user's location and provide additional information.\par
 
-\textbf{3. Firebase}
+  \item Apps can be localized to make them be available in multiple language, so more people can use the app without english being a 
+  hindrance.
 
-Google’s Firebase is a mobile platform that lets you develop mobile apps. 
-It is especially geared towards business apps, with the intention of helping businesses grow their user bases and increase their profits through their mobile apps.\par
+  \item[Firebase: ] Firebase is a BaaS (Backend as a Service) provided by Google. Firebase is scalable, distributed and secure by design. It is especially
+  geared towards business apps, with the intention of helping businesses grow their user bases and increase their profits through their mobile apps.\par
+  Firebase provides authentication(Auth), Database (Firestore), Cloud Storage (Storage), Analytics as a service.
+\end{description}
 
-
-\subsection{Hardware Specs}
-
-\textbf{Device Requirements:}
-
-Android Device: Device Running Android 8.0+
-
-iPhone Device: Device Running iOS 9 or above
-
-
-\textbf{Server Requirements:}
-
-Processor: Intel i5 and higher
-
-Processor Speed: 2.5GHz and above
-
-Required RAM Configuration: 12GB Required
-
-Hard Disk: 500GB and above
-
+\subsection{Hardware Specifications}
+\begin{description}
+  \item[User Device Requirements: ]
+  \item Any Android phone running Android Oreo or above
+  \item iPhone or iPad running iOS 13 or above
+  \item 
+  
+  \item [Minimum Server Requirements: ]
+  \item Processor: Any x86 CPU with clock sspeed of 2.5GHz and above
+  \item RAM: 2GB
+  \item Storage: Atleast 10GB
+\end{description}
+Above mentioned server requirements are minimum and need to be automatically scaled depending on usage and traffic
 
 \end{document}
