@@ -1,6 +1,6 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
-\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx, float, subfig}
+\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx, float, subfig, xcolor}
 \usepackage[automake,acronym]{glossaries}
 
 \newcommand \frontmatter { %
@@ -44,6 +44,8 @@
 \renewcommand{\cftbeforeloftitleskip}{-1.5em}
 \renewcommand{\bibname}{References}
 
+\definecolor{titleColor}{RGB}{44, 112, 187}
+
 \newcommand\projectTitle{AI Based Crop Identification Mobile App}
 \newcommand\studentAName{B. Sai Hemanth Reddy}
 \newcommand\rollNoA{17B81A05H5}
@@ -85,13 +87,9 @@
 \newgeometry{margin=1in, lmargin=1in}
 \subfile{frontmatter/01_cover_page}
 \subfile{frontmatter/02_inner_cover_page}
-\restoregeometry 
-
-\begin{spacing}{1.67}
 \subfile{frontmatter/03_external_cert}
-
 \subfile{frontmatter/04_guide_cert}
-\end{spacing}
+\restoregeometry 
 
 \subfile{frontmatter/05_acknowledgements}
 
