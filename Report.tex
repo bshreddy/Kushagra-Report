@@ -1,6 +1,7 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
-\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx}
+\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx, float, subfig}
+\usepackage[automake,acronym]{glossaries}
 
 \newcommand \frontmatter { %
     \cleardoublepage
@@ -55,6 +56,25 @@
 \newcommand\department{CSE Department}
 \newcommand\collegeName{CVR College of Engineering}
 
+\newacronym{ai}{AI}{Artificial Intelligence}
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{baas}{BaaS}{Backend-as-a-Service}
+\newacronym{cnn}{CNN}{Convolutional Neural Network}
+\newacronym{cpu}{CPU}{Central Processing Unit}
+\newacronym{eda}{EDA}{Exploratory Data Analysis}
+\newacronym{gb}{GB}{Giga Byte}
+\newacronym{gpu}{GPU}{Graphics Processing Unit}
+\newacronym{ide}{IDE}{Integrated Development Environment}
+\newacronym{ml}{ML}{Machine Learning}
+\newacronym{mvp}{MVP}{Minimum Viable Product}
+\newacronym{nn}{NN}{Neural Network}
+\newacronym{pdf}{PDF}{Portable Document Format}
+\newacronym{simd}{SIMD}{Single Instruction, Multiple Data}
+\newacronym{tls}{TLS}{Transport Layer Security}
+\newacronym{tpu}{TPU}{Tensor Processing Unit}
+
+\makeglossaries
+
 \usepackage{subfiles}
 
 \begin{document}
@@ -78,14 +98,13 @@
 
 \subfile{frontmatter/07_table_of_contents}
 
-\subfile{frontmatter/08_list_of_tables}
+% \subfile{frontmatter/08_list_of_tables}
 
 \subfile{frontmatter/09_list_of_figures}
 
-\subfile{frontmatter/10_symbols}
+% \subfile{frontmatter/10_symbols}
 
-\subfile{frontmatter/11_abbreviations}
-
+% \subfile{frontmatter/11_abbreviations}
 
 % frontmatter is upto Abbreviations
 
