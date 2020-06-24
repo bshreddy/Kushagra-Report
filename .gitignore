@@ -1,5 +1,6 @@
 .DS_Store
-pdf
 .vscode/settings.json
 data
 report.glo
+pdf
+!pdf/*.pdf
