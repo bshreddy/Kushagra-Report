@@ -10,18 +10,26 @@
 
 \subsection{Non-Functional Requirements}
 \begin{description}
-  \item[Performance: ] With the help of optimization techniques used in the app, accurate results are provided to users while performing tasks
+  \item[Performance: ] Performance is essential for user experience. Performance is critical in both mobile app and backend. Slow performane 
+  is detrimental is app usage. With the help of optimization techniques, the entire processing pipeline is tested using strictly timed 
+  unit tests.
   
-  \item[Scalabilty: ] This application maintains a positive user experience for over thousands of users, and since the data is processed
-at the server, Traffic surge can be handled in a simple manner
+  \item[Scalabilty: ] This application is built to be have thousands of concurrent users. So, this project was developed with scalabilty in 
+  mind. The server is built on flask which is light-weight, requiring less resources. The webserver is containerized, so, depending on the 
+  usage, docker can automatically start or stop instances.
 
-  \item[Usability: ] With the help of localization support in the application, users can perform necessary actions in their preferred local language
+  \item[Usability: ] In mobile app, localization support allow users to use the app in their preferred local language. Scalable, optimized 
+  backend means low latency for information processing, less downtime and better usability.
 
-  \item[Availability: ] Since Android Platform has a Lion's share in mobile market we can easily reach and serve large number of users
+  \item[Availability: ] This app is available for both iOS and Android. Since android platform is omnipresent in mobile market, user 
+  penetration can easily be archived. The small share of iOS market is also not left alone. In, later versions, image classification
+  can be performaned on-device, making internet not a necessity.
 
-  \item[Security: ] //TODO
+  \item[Security: ] All requests to server are secured using TLS. User data is saved on device using on-device encryption. Data on 
+  firebase is automatically using user password.
 
-  \item[Cost and Maintainability: ] //TODO
+  \item[Cost and Maintainability: ] Firebase is a pay-as-you-go model, lowering the costs considering that maintenance costs are 
+  essentially non-existential.
 \end{description} 
 
 \section{System Specifications}
