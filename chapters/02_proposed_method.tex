@@ -7,6 +7,29 @@
 \section{Introduction to the characteristics of the problem}
 
 \section{Design Challenges}
+\begin{description}
+    \item[Creating an Accurate AI Model: ] The primary design challenge is to creating an AI model with acceptable accuracy. Convolutional
+    neural networks can be used for image detection. A simple neural network can be created using transfer learning. This base model is 
+    essential to design an Minimum Viable Product (MVP). This MVP is essential for data collection for improving the AI model with Data 
+    Engine
+    
+    \item[Managing Design Influence: ] Software is know for its high plasticity and the software requirements changes as stakeholders for
+    the app change. This need to be primary consideration for design of any API/Data Models that are crutial for app's performance.
+
+    \item[Ethical Practices: ] Deep learning model are inheriently data hungry and these also tend to perform better with more data. So
+    data collection is essentia but this also presents an ethical question about privacy. So, any data collection should only be to 
+    improve the AI models and not breach user privacy. Steps need to be take to educate user's what kind of data is collected.
+
+    \item[Performance] Any app need to be fast and scalable. All computationally intensive processes that need to be 
+    done of user's device need to be run in the background to prevent app from becoming unresponsive. This can be archived using 
+    threads. A thread of computation can be created for any heavy computational or network activity. This asynchronous nature can 
+    cause race conditions. This race conditions can be dealt with thread safe data models and semaphores.
+    
+    \item[Scalability: ]
+    Backend also need to scale based on usage, traffic. So care need to be taken to design API/Date models that can easily scale in 
+    realtime based on requirements. Containerizing the backend makes it easy for scalablilty. Docker is an software environment that
+    can be used to create, maintain and run the containers
+\end{description}
 
 \section{Proposed Solution}
 Considering the limitations of exsisting systems, it seems obvious that we need to have a better system. We have developed a simple 
