@@ -1,6 +1,6 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
-\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx, float, subfig, xcolor}
+\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx, float, subfig, xcolor, indentfirst}
 \usepackage[automake,acronym]{glossaries}
 
 \newcommand \frontmatter { %
@@ -90,6 +90,8 @@
 \subfile{frontmatter/03_external_cert}
 \subfile{frontmatter/04_guide_cert}
 \restoregeometry 
+
+\setlength{\parindent}{4em}
 
 \subfile{frontmatter/05_acknowledgements}
 
