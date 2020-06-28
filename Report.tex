@@ -1,6 +1,7 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
-\usepackage{fontspec, titlesec, setspace, lipsum, tocloft, graphicx, float, subfig, xcolor, indentfirst}
+\usepackage{fontspec, titlesec, setspace, lipsum, tocloft} 
+\usepackage{graphicx, float, subfig, xcolor, indentfirst, listings}
 \usepackage[automake,acronym]{glossaries}
 
 \newcommand \frontmatter { %
@@ -35,6 +36,7 @@
 \renewcommand{\contentsname}{Table Of Contents}
 \renewcommand{\cfttoctitlefont}{\hspace*{\fill}\bfseries\MakeUppercase}
 \renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
+\renewcommand{\lstlistlistingname}{List of Code Snippets}
 \renewcommand{\cftbeforetoctitleskip}{-1.5em}
 \renewcommand{\cftlottitlefont}{\hspace*{\fill}\bfseries\MakeUppercase}
 \renewcommand{\cftafterlottitle}{\hspace*{\fill}}
@@ -45,6 +47,16 @@
 \renewcommand{\bibname}{References}
 
 \definecolor{titleColor}{RGB}{44, 112, 187}
+\definecolor{codeBackground}{RGB}{242, 242, 247}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  backgroundcolor=\color{codeBackground},
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
 
 \newcommand\projectTitle{AI Based Crop Identification Mobile App}
 \newcommand\studentAName{B. Sai Hemanth Reddy}
@@ -61,6 +73,7 @@
 
 \newacronym{ai}{AI}{Artificial Intelligence}
 \newacronym{api}{API}{Application Programming Interface}
+\newacronym{app}{App}{Application}
 \newacronym{baas}{BaaS}{Backend-as-a-Service}
 \newacronym{cnn}{CNN}{Convolutional Neural Network}
 \newacronym{cpu}{CPU}{Central Processing Unit}
@@ -99,7 +112,7 @@
 
 \subfile{frontmatter/07_table_of_contents}
 
-% \subfile{frontmatter/08_list_of_tables}
+% \subfile{frontmatter/08_list_of_listings}
 
 \subfile{frontmatter/09_list_of_figures}
 
