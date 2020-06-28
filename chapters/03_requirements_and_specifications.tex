@@ -32,7 +32,7 @@
   
   \item[Scalabilty:] This application is built to be have thousands of concurrent users. So, this project was developed with scalability in 
   mind. The server is built on flask which is light-weight, requiring less resources. The web server is containerized, so, depending on the 
-  usage, docker can automatically start or stop instances.
+  usage, docker containers can automatically be started or stopped.
 
   \item[Usability:] In mobile app, localization support allow users to use the app in their preferred local language. Scalable, optimized 
   backend means low latency for information processing, less downtime and better usability.
@@ -53,44 +53,45 @@
 \subsection{Software Specifications}
 
 \begin{description}
-  \item[Pytorch:] PyTorch is an open-source machine learning library based on Torch library. PyTorch is a Tensor computing library and also 
+  \item[Pytorch:] PyTorch\cite{pytorch} is an open-source machine learning library based on Torch library. PyTorch is a Tensor computing library and also 
   a deep learning library with automatic differentiation system. In can be used to build state-of-the-art Neural Networks which are used in
   self-driving cars.\par
-  The crop detection and crop disease detection is done using a Convolutional Neural Network(CNN) built using ResNet50 as a feature extractor.
-  The current models have an accuracy of 92\% and 90\%.
+  The crop detection and crop disease detection is done using a Convolutional Neural Network(CNN)\cite{cnn} trained using transfer learning 
+  techniques. ResNet50\cite{resnet} that is pre-trained on ImageNet\cite{imagenet} is used as a feature extractor.
+  The current models have an accuracy of 92\% and 94\%.  This is covered in detail in Chapter. \ref{chap:imp_test}.
 
-  \item[NumPy:] NumPy is a numerical library that is used for accelerated tensor operations. This help is speeding up the computation by 
+  \item[NumPy:] NumPy\cite{numpy} is a numerical library that is used for accelerated tensor operations. This help is speeding up the computation by 
   taking advantage of SIMD instructions on modern CPUs and GPUs. This library is useful for preprocessing data before classification.
 
-  \item[Matplotlib:] Matplotlib is a plotting library for python. This is useful for EDA and performing error analysis while training 
+  \item[Matplotlib:] Matplotlib\cite{pyplot} is a plotting library for python. This is useful for EDA and performing error analysis while training 
   and testing the AI models.
 
-  \item[Pillow:] Pilliow is a Python Image Library is an free and open-source that supports opening, modifying, saving images. This is used to convert data
-  sent over internet as bytes to images that can then be used in the AI models for inference. PIL is also used to load images from disk for
-  training the models.
+  \item[Pillow:] Pilliow\cite{pillow} is a Python Image Library is an free and open-source that supports opening, modifying, saving images. This is 
+  used to convert data sent over internet as bytes to images that can then be used in the AI models for inference. PIL is also used to load 
+  images from disk for training the models.
 
-  \item[Colab:] Google Colab is a free cloud service which helps in developing deep learning applications using popular libraries such 
+  \item[Colab:] Google Colab\cite{colab} is a free cloud service which helps in developing deep learning applications using popular libraries such 
   as Keras, TensorFlow, PyTorch. In runs on Google servers with GPU or TPU acceleration which helps in reducing the training period for 
   the AI model. Giving team, the ability to iterate and improve quickly.
 
-  \item[Flask and Docker:] Flask is a light-weight web framework for python. This can be used to run the inference server. Flask is ran
+  \item[Flask and Docker:] Flask\cite{flask} is a light-weight web framework for python. This can be used to run the inference server. Flask is ran
   inside a docker container. Docker is a set of platform as a service products that uses OS-level virtualization to deliver software in 
   packages called containers. These container can easily be scaled up or down to automatically adjust for usage and network traffic.
 
-  \item[Android Studio:] Android Studio is the official IDE for developing native Android Apps. Android Studio provides a unified  
+  \item[Android Studio:] Android Studio\cite{android} is the official IDE for developing native Android Apps. Android Studio provides a unified  
   environment where you can build apps for Android phones, tablets, Android Wear, Android TV, and Android Auto. Structured code modules 
   allow you to  divide your project into units of functionality that you can independently build, test, and debug.\par
   Android's Location library can be used to obtain user's location. Google Maps can we used to display user's location and provide 
   additional information.
 
-  \item[Xcode:] Xcode is the official IDE for developing native iOS apps. Xcode provides a unified environment for developing native apps 
+  \item[Xcode:] Xcode\cite{ios} is the official IDE for developing native iOS apps. Xcode provides a unified environment for developing native apps 
   for all apple devices and services. Swift programming language is used to write apps in Xcode. CoreLocation framework can be used to 
   obtain user's location. MapKit (Apple Maps) can be used to display user's location and provide additional information.\par
 
   \item Apps can be localized to make them be available in multiple language, so more people can use the app without english being a 
   hindrance.
 
-  \item[Firebase:] Firebase is a BaaS (Backend as a Service) provided by Google. Firebase is scalable, distributed and secure by design. It is especially
+  \item[Firebase:] Firebase\cite{firebase} is a BaaS (Backend as a Service) provided by Google. Firebase is scalable, distributed and secure by design. It is especially
   geared towards business apps, with the intention of helping businesses grow their user bases and increase their profits through their mobile apps.\par
   Firebase provides authentication(Auth), Database (Firestore), Cloud Storage (Storage), Analytics as a service.
 \end{description}
