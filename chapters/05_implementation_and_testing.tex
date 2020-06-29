@@ -1,4 +1,4 @@
-\documentclass[../Report.tex]{subfiles}
+  \documentclass[../Report.tex]{subfiles}
 
 \begin{document}
 
@@ -121,7 +121,7 @@ The following is the code snippets for loading the model
     \label{fig:crop_acc}
   \end{figure}
 
-  \item[Disease Detection:] We are using Adam Optimizer and Negative Log Likelihood (NLLLoss) as Loss funtion. The model is trained for 
+  \item[Disease Detection:] We are using \cite{adam} Optimizer and Negative Log Likelihood (NLLLoss) as Loss funtion. The model is trained for 
   10 epochs with a batch size of 16 with learning rate decay rate $\gamma$ of 0.1 for every 5 epochs.
   \begin{lstlisting}[language=python,caption={Disease Detection Image Pre-processing},captionpos=b]
     criterion = nn.NLLLoss()
@@ -274,6 +274,7 @@ and all of the user's data is automatically synced between devices.
   \item All images are cached to prevent constant retrieval from the cloud.
 \end{itemize}
 
+\noindent
 GitHub Repos
 \begin{description}
   \item [iOS App:] $\texttt{https://github.com/SaiHemanthBR/CropPrediction-ios}$
