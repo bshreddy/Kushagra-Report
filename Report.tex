@@ -66,7 +66,7 @@
 \newcommand\studentCName{D.V. Krishna Kalyan}
 \newcommand\rollNoC{17B81A05C2}
 \newcommand\guideName{Ms. M. Sathya Devi}
-\newcommand\guideDesignation{Associate Professor}
+\newcommand\guideDesignation{Assistant Professor}
 \newcommand\hodName{Dr. K. Venkateswara Rao}
 \newcommand\department{CSE Department}
 \newcommand\collegeName{CVR College of Engineering}
@@ -95,13 +95,17 @@
 
 \begin{document}
 
+\newgeometry{margin=1in, lmargin=1in}
+\pagenumbering{gobble}
+\subfile{frontmatter/01_cover_page}
+\restoregeometry 
+
 \frontmatter
 
 \newgeometry{margin=1in, lmargin=1in}
-\subfile{frontmatter/01_cover_page}
 \subfile{frontmatter/02_inner_cover_page}
 \subfile{frontmatter/03_external_cert}
-\subfile{frontmatter/04_guide_cert}
+% \subfile{frontmatter/04_guide_cert}
 \restoregeometry 
 
 \setlength{\parindent}{4em}

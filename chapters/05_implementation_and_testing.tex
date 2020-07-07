@@ -29,16 +29,16 @@ translation invariance characteristics.\par
 
 CNNs makes it easy to perform Image Classification by sharing weights, this means CNNs use less memory compared to simple Artificial Neural 
 Networks with same perform. But, CNNs still take a long time to train, so instead of trying to create a CNN from the bottom-up, we can use 
-transfer learning to use a pretrained ConvNet.\par
+transfer learning to use a pre-trained ConvNet.\par
 
-In this project, we use ResNet that has been pretrained on ImageNet \cite{imagenet}. ImageNet is a large visual dataset containing more than 
+In this project, we use ResNet that has been pre-trained on ImageNet \cite{imagenet}. ImageNet is a large visual dataset containing more than 
 14 million images with over 20,000 categories. This gives us a huge advantage as the ConvNet has essentially learned the basics of vision, 
-like detecting egdes, lines, shapes, etc.\par
+like detecting edges, lines, shapes, etc.\par
 
 \subsection{Data Pre-processing}
 \begin{description}
   \item[Crop Prediction:] Before passing image to ConvNet, they need to be slightly processed. This depends if we are training or 
-  testing/inference. During training, images are randomly croped to size $320px \times 320px$, flipped and normalized. 
+  testing/inference. During training, images are randomly cropped to size $320px \times 320px$, flipped and normalized. 
   During testing/inference, images are resized to $480px \times 480px$, then center cropped to size $320px \times 320px$ and normalized.
 
   \begin{lstlisting}[language=python,caption={Crop Prediction Image Pre-processing},captionpos=b]
@@ -105,7 +105,7 @@ The following is the code snippets for loading the model
 
 \begin{description}
   \item[Crop Prediction:] We are using Stochastic Gradient Descent (SGD) with momentum as optimization algorithm and CrossEntropyLoss as 
-  Loss funtion. The model is trained for 50 epochs with a batch size of 16 with learning rate decay rate $\gamma$ of 0.1 for every 10 epochs.
+  Loss function. The model is trained for 50 epochs with a batch size of 16 with learning rate decay rate $\gamma$ of 0.1 for every 10 epochs.
 
   \begin{lstlisting}[language=python,caption={Disease Detection Image Pre-processing},captionpos=b]
     criterion = nn.CrossEntropyLoss()
@@ -121,7 +121,7 @@ The following is the code snippets for loading the model
     \label{fig:crop_acc}
   \end{figure}
 
-  \item[Disease Detection:] We are using \cite{adam} Optimizer and Negative Log Likelihood (NLLLoss) as Loss funtion. The model is trained for 
+  \item[Disease Detection:] We are using \cite{adam} Optimizer and Negative Log Likelihood (NLLLoss) as Loss function. The model is trained for 
   10 epochs with a batch size of 16 with learning rate decay rate $\gamma$ of 0.1 for every 5 epochs.
   \begin{lstlisting}[language=python,caption={Disease Detection Image Pre-processing},captionpos=b]
     criterion = nn.NLLLoss()
@@ -149,7 +149,7 @@ Inference Server is implemented using flask to make is simple ad light-weight. T
   \item \texttt{http://<server\_ip>/disease}
 \end{itemize}
 
-When any one of these endpoints, receives a request, bytes of data are converted to image, pre-processsing is applied appropriately 
+When any one of these endpoints, receives a request, bytes of data are converted to image, pre-processing is applied appropriately 
 and send to the respect AI model. Following is a snippet of the inference code.
 
 \begin{lstlisting}[language=python,caption={Crop Inference Code},captionpos=b]
