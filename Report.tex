@@ -1,8 +1,9 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=1in, lmargin=1.5in]{geometry}
 \usepackage{fontspec, titlesec, setspace, lipsum, tocloft} 
-\usepackage{graphicx, float, subfig, xcolor, indentfirst, listings}
+\usepackage{graphicx, float, subfig, xcolor, indentfirst, hyperref, caption}
 \usepackage[automake,acronym]{glossaries}
+\usepackage[outputdir=pdf]{minted}
 
 \newcommand \frontmatter { %
     \cleardoublepage
@@ -36,7 +37,6 @@
 \renewcommand{\contentsname}{Table Of Contents}
 \renewcommand{\cfttoctitlefont}{\hspace*{\fill}\bfseries\MakeUppercase}
 \renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
-\renewcommand{\lstlistlistingname}{List of Code Snippets}
 \renewcommand{\cftbeforetoctitleskip}{-1.5em}
 \renewcommand{\cftlottitlefont}{\hspace*{\fill}\bfseries\MakeUppercase}
 \renewcommand{\cftafterlottitle}{\hspace*{\fill}}
@@ -45,18 +45,30 @@
 \renewcommand{\cftafterloftitle}{\hspace*{\fill}}
 \renewcommand{\cftbeforeloftitleskip}{-1.5em}
 \renewcommand{\bibname}{References}
+% \SetupFloatingEnvironment{listing}{listname={}}
+\renewcommand{\listoflistingscaption}{\vspace*{-5.5em}\hspace*{\fill}\fontsize{12pt}{12pt}\bfseries List of Code Snippets \hspace*{\fill}}
+\renewcommand{\listingscaption}{Code Snippet}
 
 \definecolor{titleColor}{RGB}{44, 112, 187}
+\definecolor{citeColor}{RGB}{0, 123, 255}
 \definecolor{codeBackground}{RGB}{242, 242, 247}
 
-\lstset{
-  basicstyle=\ttfamily,
-  columns=fullflexible,
-  frame=single,
-  breaklines=true,
-  backgroundcolor=\color{codeBackground},
-  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+\hypersetup{
+    colorlinks=true,
+    citecolor=citeColor,
+    linktoc=all,
+    linkcolor=black,
 }
+
+\setminted{
+  autogobble=true,
+  breaklines=true,
+  bgcolor=codeBackground,
+  frame=single,
+}
+
+\captionsetup[listing]{skip=0pt}
+\captionsetup[figure]{skip=2pt}
 
 \newcommand\projectTitle{AI Based Crop Identification Mobile App}
 \newcommand\studentAName{B. Sai Hemanth Reddy}
@@ -67,7 +79,7 @@
 \newcommand\rollNoC{17B81A05C2}
 \newcommand\guideName{Ms. M. Sathya Devi}
 \newcommand\guideDesignation{Assistant Professor}
-\newcommand\hodName{Dr. K. Venkateswara Rao}
+\newcommand\hodName{Dr. A. Vani Vathsala}
 \newcommand\department{CSE Department}
 \newcommand\collegeName{CVR College of Engineering}
 
@@ -111,17 +123,11 @@
 \setlength{\parindent}{4em}
 
 \subfile{frontmatter/05_acknowledgements}
-
 \subfile{frontmatter/06_abstract}
-
 \subfile{frontmatter/07_table_of_contents}
-
-% \subfile{frontmatter/08_list_of_listings}
-
+\subfile{frontmatter/08_list_of_listings}
 \subfile{frontmatter/09_list_of_figures}
-
 % \subfile{frontmatter/10_symbols}
-
 % \subfile{frontmatter/11_abbreviations}
 
 % frontmatter is upto Abbreviations
@@ -129,17 +135,11 @@
 \mainmatter
 
 \subfile{chapters/01_introduction}
-
 \subfile{chapters/02_proposed_method}
-
 \subfile{chapters/03_requirements_and_specifications}
-
 \subfile{chapters/04_analysis_and_design}
-
 \subfile{chapters/05_implementation_and_testing}
-
 \subfile{chapters/06_conclusion}
-
 \subfile{chapters/references.tex}
 
 

@@ -19,7 +19,7 @@
   
   \item Generate Report using the predictions.
   
-  \item Save report as PDF and share it easily using email or chat application (like iMessages, WhatsApp).
+  \item Save report as PDF and share it easily using email or chat application (like iMessages, Signal or Telegram).
 
 \end{enumerate}
 
@@ -30,7 +30,7 @@
   is detrimental is app usage. With the help of optimization techniques, the entire processing pipeline is tested using strictly timed 
   unit tests.
   
-  \item[Scalabilty:] This application is built to be have thousands of concurrent users. So, this project was developed with scalability in 
+  \item[Scalability:] This application is built to be have thousands of concurrent users. So, this project was developed with scalability in 
   mind. The server is built on flask which is light-weight, requiring less resources. The web server is containerized, so, depending on the 
   usage, docker containers can automatically be started or stopped.
 
@@ -66,11 +66,11 @@
   \item[Matplotlib:] Matplotlib\cite{pyplot} is a plotting library for python. This is useful for EDA and performing error analysis while training 
   and testing the AI models.
 
-  \item[Pillow:] Pilliow\cite{pillow} is a Python Image Library is an free and open-source that supports opening, modifying, saving images. This is 
+  \item[Pillow:] Pillow\cite{pillow} is a Python Image Library is an free and open-source that supports opening, modifying, saving images. This is 
   used to convert data sent over internet as bytes to images that can then be used in the AI models for inference. PIL is also used to load 
   images from disk for training the models.
 
-  \item[Colab:] Google Colab\cite{colab} is a free cloud service which helps in developing deep learning applications using popular libraries such 
+  \item[Google Colab:] Google Colab\cite{colab} is a free cloud service which helps in developing deep learning applications using popular libraries such 
   as Keras, TensorFlow, PyTorch. In runs on Google servers with GPU or TPU acceleration which helps in reducing the training period for 
   the AI model. Giving team, the ability to iterate and improve quickly.
 
@@ -96,20 +96,22 @@
   Firebase provides authentication(Auth), Database (Firestore), Cloud Storage (Storage), Analytics as a service.
 \end{description}
 
+\clearpage
 \subsection{Hardware Specifications}
 
-\begin{description}
-  \item[User Device Requirements:]
+\noindent\textbf{User Device Requirements:}
+\begin{itemize}
   \item Any Android phone running Android Oreo or above.
   \item iPhone or iPad running iOS 13 or above.
   \item An internet connection.
-  \item 
-  
-  \item [Minimum Server Requirements:]
+\end{itemize}
+
+\noindent\textbf{Minimum Server Requirements:}
+\begin{itemize}
   \item Processor: Any x86 CPU with clock speed of 2.5GHz and above.
   \item RAM: 2GB.
   \item Storage: At-least 10 G.B.
-\end{description}
+\end{itemize}
 Above mentioned server requirements are minimum and need to be automatically scaled depending on usage and traffic.
 
 \end{document}
